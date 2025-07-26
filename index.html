@@ -3,23 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <title>Stupid Calculator</title>
+  <link rel="icon" href="img/logo.png" type="image/png"/>
   <style>
     body {
       font-family: 'Comic Sans MS', cursive, sans-serif;
       background: #fdf6e3;
-      padding: 40px;
+      margin: 0;
+      padding: 0;
       display: flex;
       justify-content: center;
+      align-items: center;
+      min-height: 100vh;
     }
     .container {
       background: #fff;
       padding: 30px;
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      width: 90%;
-      max-width: 400px;
+      width: 100%;
+      max-width: 420px;
       text-align: center;
       box-sizing: border-box;
+      transition: all 0.3s ease;
     }
     h1 {
       color: #e91e63;
@@ -34,16 +39,17 @@
     }
     select, input {
       width: 100%;
-      padding: 8px;
+      padding: 10px;
       margin-top: 5px;
       border-radius: 5px;
       border: 1px solid #ccc;
-      font-size: 14px;
+      font-size: 16px;
+      box-sizing: border-box;
     }
     button {
       margin-top: 20px;
       width: 100%;
-      padding: 10px;
+      padding: 12px;
       background: #e91e63;
       color: white;
       border: none;
@@ -60,6 +66,19 @@
       margin-top: 20px;
       font-size: 18px;
       color: #333;
+    }
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+      .container {
+        padding: 20px;
+        width: 90%;
+      }
+      select, input, button {
+        font-size: 15px;
+        padding: 10px;
+      }
     }
   </style>
 </head>
